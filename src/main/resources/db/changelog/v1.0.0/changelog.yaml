@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: 01_2025-02-28_init.sql
+      relativeToChangelogFile: true
+  - include:
+      file: 02_2025-03-01_table_1_view.sql
+      relativeToChangelogFile: true
+  - include:
+      file: 03_2025-03-02_table_2_view.sql
+      relativeToChangelogFile: true
+  - include:
+      file: 04_2025-03-02_table_3_view.sql
+      relativeToChangelogFile: true

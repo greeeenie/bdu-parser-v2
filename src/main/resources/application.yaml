@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/changelog/changelog.yaml
+
+app:
+  reports:
+    scan: classpath:report/scan-report.html
+    bdus: classpath:report/bdus-report.xml
+    cwes: classpath:report/cwes-report.xml
+    capecs: classpath:report/capecs-report.xml
+  runners:
+    enabled:
+      scan-report: ${RUNNER_SCAN_REPORT_ENABLED:false}
+      translator: ${RUNNER_TRANSLATOR_ENABLED:false}
+      reports-parser: ${RUNNER_REPORTS_PARSER_ENABLED:false}
+  api-key: ${OPENAI_API_KEY}
